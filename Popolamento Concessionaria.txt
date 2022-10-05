@@ -1,0 +1,95 @@
+insert into concessionaria.telaio (CodiceTe,Colore,Tipologia)
+Values (111,"Bianco","PVC")
+
+insert into concessionaria.telaio (CodiceTe,Colore,Tipologia)
+Values (222,"Verde Carrarmato","Ferro")
+
+insert into concessionaria.telaio (CodiceTe,Colore,Tipologia)
+Values (333,"Nero","PVC")
+
+insert into concessionaria.entratauscita (CodiceProd,DataEntrata,DataUscita)
+values (123,"2015/08/10","2017/08/10")
+
+insert into concessionaria.entratauscita (CodiceProd,DataEntrata)
+values (456,"2001/08/10")
+
+insert into concessionaria.entratauscita (CodiceProd,DataEntrata,DataUscita)
+values (789,"2010/10/11","2013/08/10")
+
+insert into concessionaria.sede (CodSede,Comune,Indirizzo,Padiglione,NumAuto)
+values (999,"Salerno","Via Albori","Kia Motors",1)
+
+insert into concessionaria.sede (CodSede,Comune,Indirizzo,Padiglione,NumAuto)
+values (888,"Roma","Via Tronchi","Renault",2)
+
+insert into concessionaria.sede (CodSede,Comune,Indirizzo,Padiglione,NumAuto)
+values (777,"Milano","Via Cecchi","Fiat",3)
+
+insert into concessionaria.motore (CodiceM,CC,Cavalli,Carburante)
+values (1111,1600,75,"Benzina")
+
+insert into concessionaria.motore (CodiceM,CC,Cavalli,Carburante)
+values (2222,1300,75,"GPL")
+
+insert into concessionaria.motore (CodiceM,CC,Cavalli,Carburante)
+values (3333,1200,75,"Diesel")
+
+insert into concessionaria.padrone (CodiceFiscale,Nome,Cognome,Età,Indirizzo)
+Values ("DLCNTN97D21F138X","Antonio","De Luca",21,"Via A.Iannuzzi")
+
+insert into concessionaria.padrone (CodiceFiscale,Nome,Cognome,Età,Indirizzo)
+Values ("AAAAAA98C12F138X","Andrea,"Allina",20,"P.zza Ronco")
+
+insert into concessionaria.padrone (CodiceFiscale,Nome,Cognome,Età,Indirizzo)
+Values ("FFFFFF99D21F138X","Francesco","De Lia",19,"Via Roma")
+
+insert into concessionaria.automobile (Codice,Marca,Modello,TipoM,Prezzo,NumSerie,AnnoImma,SedeA,NumProg,PartitaIva,Motore,Telaio)
+values (123,"Sportage","Kia","Nuova",14499.49,455186,"2015/06/02",999,1,7.49,1111,111)
+
+insert into concessionaria.automobile (Codice,Marca,Modello,TipoM,Prezzo,NumSerie,AnnoImma,SedeA,NumProg,Chilometri,Padrone,Motore,Telaio)
+values (456,"Panda","Fiat","Usata",1200,897456,"2002/10/22",777,2,18000,"AAAAAA98C12F138X",2222,222)
+
+insert into concessionaria.automobile (Codice,Marca,Modello,TipoM,Prezzo,NumSerie,AnnoImma,SedeA,NumProg,DataPrestito,DataRestituzione,Motore,Telaio)
+values (789,"Clio","Renault","Noleggiata",149,548528,"2002/10/22",888,3,"2011/03/11","2012/12/12",3333,333)
+
+insert into concessionaria.tagliando (CodiceT,PrezzoT,DataT)
+Values (123,74.49,"2017/11/10")
+
+insert into concessionaria.pass_proprietà (CodiceP,Bollo,DataB)
+Values (456,74.49,"2017/11/10")
+
+insert into concessionaria.riparazione (CodRip, DataInizioRev, DataFineRev, InfoRip)
+Values (1,"2017/08/01", "2017/08/10", "Cambio olio")
+
+insert into concessionaria.riparazione (CodRip, DataInizioRev, InfoRip)
+Values (2,"2001/08/10", "Cambio motore" )
+
+insert into concessionaria.riparazione (CodRip, DataInizioRev, DataFineRev, InfoRip)
+Values (3, "2010/10/11","2013/08/10", "Cambio telaio")
+
+insert into concessionaria.revisione (Auto, Rip1)
+values (123, 1)
+
+insert into concessionaria.revisione (Auto, Rip1)
+values (456, 2)
+
+insert into concessionaria.revisione (Auto, Rip1)
+values (789, 3)
+
+insert into concessionaria.impiegati (CodiceID,Nome,Cognome,Età, CodiceFiscale, Stipendio, AnniLavorativi, OreLavGiorno, GiorniAnnuali, DataAssunzione, Ruolo, Titolo, SedeI, NumContr, NumVend)
+Values (1, "Francesco","De Lia", 19, "FFFFFF99D21F138X", 0, 12, 300, "2018/01/30", "Meccanico", "Centralina", 999)
+
+insert into concessionaria.impiegati (CodiceID,Nome,Cognome,Età, CodiceFiscale, Stipendio, AnniLavorativi, OreLavGiorno, GiorniAnnuali, DataAssunzione, Ruolo, NumContr,  SedeI)
+Values (2, "Francesca","De Luca", 21, "FFFHHH99D21F138X", 2, 12, 300, "2016/01/30", "D'ufficio", 10, 888)
+
+insert into concessionaria.impiegati (CodiceID,Nome,Cognome,Età, CodiceFiscale, Stipendio, AnniLavorativi, OreLavGiorno, GiorniAnnuali, DataAssunzione, Ruolo, NumVend,  SedeI)
+Values (3, "Giovanni","Rossi", 23, "FFFGGG99D21F138X", 4, 12, 300, "2014/01/30", "Venditore", 20, 777)
+
+insert into concessionaria.manutenzione (Impiegato, Rip2)
+values (1, 1)
+
+insert into concessionaria.manutenzione (Impiegato, Rip2)
+values (1, 2)
+
+insert into concessionaria.manutenzione (Impiegato, Rip2)
+values (1, 3)
